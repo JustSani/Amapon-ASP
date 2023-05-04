@@ -11,7 +11,13 @@ namespace Amapon
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Codice"] == null)
+                Response.Redirect("paginaErrore.aspx?errore=1");
 
+            if (!Page.IsPostBack)
+            { 
+            
+            }
         }
     }
 }
