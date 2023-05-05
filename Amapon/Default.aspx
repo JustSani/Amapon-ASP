@@ -34,12 +34,12 @@
                         <p>Please login to your account</p>
       
                         <div class="form-outline mb-4">
-                            <asp:TextBox ID="TextBox1" runat="server" required="true" type="text" class="form-control"
+                            <asp:TextBox ID="TextBox1" runat="server" Text="customer" required="true" type="text" class="form-control"
                                 placeholder="Username or Email" ></asp:TextBox>
                         </div>
                         
                         <div class="form-outline mb-4" aria-sort="none">
-                            <asp:TextBox ID="TextBox2" runat="server" Text="Ciaon" required="true" type="password" class="form-control" placeholder="Password"></asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" Text="customer" required="true" type="password" class="form-control" placeholder="Password"></asp:TextBox>
                         </div>
       
                         <div class="text-center pt-1 mb-5 pb-1">
