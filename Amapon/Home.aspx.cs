@@ -24,5 +24,12 @@ namespace Amapon
         {
             Response.Redirect("Home.aspx");
         }
+
+        protected void ShowCategori_Redirect(object sender, EventArgs e)
+        {
+            Session["search"] = "Ciaon";
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
+            Response.Redirect("ShowCategori.aspx");
+        }
     }
 }
