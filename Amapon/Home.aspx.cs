@@ -27,8 +27,9 @@ namespace Amapon
 
         protected void ShowCategori_Redirect(object sender, EventArgs e)
         {
-            Session["search"] = "Ciaon";
-            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
+            LinkButton button = (LinkButton)sender;
+            Session["search"] = button.ID.Split('_')[1];
+            //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
             Response.Redirect("ShowCategori.aspx");
         }
     }

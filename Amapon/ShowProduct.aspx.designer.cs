@@ -96,6 +96,24 @@ namespace Amapon
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tempo;
 
         /// <summary>
+        /// Controllo quantiSelect.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect quantiSelect;
+
+        /// <summary>
+        /// Controllo addToCartBtn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addToCartBtn;
+
+        /// <summary>
         /// Controllo venditore.
         /// </summary>
         /// <remarks>

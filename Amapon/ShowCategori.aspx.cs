@@ -15,7 +15,7 @@ namespace Amapon
         protected void Page_Load(object sender, EventArgs e)
         {
                 if (Session["search"] == null)
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("Home.aspx");
                 else
                 {
                     string strSQL = string.Empty;
@@ -24,7 +24,7 @@ namespace Amapon
                     strSQL = @"SELECT DISTINCT  * FROM 
                                     (SELECT macrocategories.*,categories.id as id FROM categories INNER JOIN macrocategories ON macrocategories.catID = categories.mid) as categories
                                  INNER JOIN products ON categories.id=products.cID
-                              WHERE categories.catID=1";
+                              WHERE categories.catID=" + Session["search"];
 
                     /*grdMovimenti.AutoGenerateColumns = false;
                     grdMovimenti.DataSource = adoWeb.eseguiQuery(strSQL, CommandType.Text);
@@ -138,5 +138,7 @@ namespace Amapon
             Session["prodId"] = source.ID.Split('-')[2];
             Response.Redirect("ShowProduct.aspx");
         }
+
+
     }
 }

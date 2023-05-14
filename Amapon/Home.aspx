@@ -43,13 +43,13 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Profile </a>
+                <a class="nav-link" href="/Profile.aspx">Profile </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
+                <a class="nav-link" href="/Cart.aspx">Cart</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Orders</a>
+                <a class="nav-link" href="/Orders.aspx">Orders</a>
               </li>
             </ul>
           </div>
@@ -60,17 +60,17 @@
                    <div class="col-md-3 wrapper" >
                         <div class="card-container">
                             <b>Technology & Computers</b>
-                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="ShowCategori_Redirect">
+                            <asp:LinkButton ID="img_1" runat="server" OnClick="ShowCategori_Redirect">
                                 <img src='https://sanino.altervista.org/Amapon/img/Technology.jpeg' style="width: 100%;">
                             </asp:LinkButton>
                             <br><br>
-                            <asp:LinkButton ID="LinkButton2" runat="server"  OnClick="ShowCategori_Redirect">Scopri di più</asp:LinkButton>
+                            <asp:LinkButton ID="name_1" runat="server"  OnClick="ShowCategori_Redirect">Scopri di più</asp:LinkButton>
                         </div>
                    </div>
                    <div class="col-md-3 wrapper" >
                        <div class="card-container">
                             <b>Books</b>
-                            <asp:LinkButton ID="LinkButton6" runat="server" OnClick="ShowCategori_Redirect">
+                            <asp:LinkButton ID="img_2" runat="server" OnClick="ShowCategori_Redirect">
                                 <img src='https://sanino.altervista.org/Amapon/img/Books.jpeg' style="width: 100%;"> </a>
                            </asp:LinkButton> 
                            <br><br>
@@ -80,7 +80,7 @@
                    <div class="col-md-3 wrapper" >
                         <div class="card-container">
                             <b>Clothing & Accessories</b>
-                            <asp:LinkButton ID="LinkButton3" runat="server" OnClick="ShowCategori_Redirect">
+                            <asp:LinkButton ID="img_3" runat="server" OnClick="ShowCategori_Redirect">
                                  <img src='https://sanino.altervista.org/Amapon/img/Clothing.jpeg' style="width: 100%;">
                             </asp:LinkButton>
                             <br><br>
@@ -90,7 +90,7 @@
                    <div class="col-md-3 wrapper" >
                         <div class="card-container">
                             <b>Home & Kitchen</b>
-                            <asp:LinkButton ID="LinkButton4" runat="server" OnClick="ShowCategori_Redirect">
+                            <asp:LinkButton ID="img_4" runat="server" OnClick="ShowCategori_Redirect">
                                 <img src='https://sanino.altervista.org/Amapon/img/Home.jpeg' style="width: 100%;">
                             </asp:LinkButton>
                             <br><br>
@@ -101,8 +101,8 @@
                    <div class="col-md-3 wrapper" >
                         <div class="card-container">
                             <b>Games & Toys</b>
-                            <asp:LinkButton ID="LinkButton5" runat="server" OnClick="ShowCategori_Redirect">
-                                <img src='https://sanino.altervista.org/Amapon/img/Games.jpeg' style="width: 100%;"> </a>
+                            <asp:LinkButton ID="img_5" runat="server" OnClick="ShowCategori_Redirect">
+                                <img src='https://sanino.altervista.org/Amapon/img/Games.jpeg' style="width: 100%;">
                             </asp:LinkButton>
                             <br><br>
                             <a href='?category=Games' ><small>Scopri di più</small></a>
@@ -111,17 +111,19 @@
                     <div class="col-md-3 wrapper" >
                         <div class="card-container">
                             <b>Health & Beauty</b>
-                            <a href='?category=Health'><img src='https://sanino.altervista.org/Amapon/img/Health.jpeg' style="width: 100%;"> </a>
-                            <br><br>
+                           <asp:LinkButton ID="img_6" runat="server" OnClick="ShowCategori_Redirect">
+                                <img src='https://sanino.altervista.org/Amapon/img/Health.jpeg' style="width: 100%;"> 
+                            </asp:LinkButton>
+                           <br><br>
                             <a href='?category=Health' ><small>Scopri di più</small></a>
                         </div>
                     </div>
                     <div class="col-md-3 wrapper" >
                         <div class="card-container">
                             <b>Food & Drinks</b>
-                            <a href='?category=Food'>
+                            <asp:LinkButton ID="img_7" runat="server" OnClick="ShowCategori_Redirect">
                                 <img src='https://sanino.altervista.org/Amapon/img/Food.jpeg' style="width: 100%;">
-                            </a>
+                            </asp:LinkButton>
                             <br><br>
                             <a href='?category=Food' ><small>Scopri di più</small></a>
                         </div>

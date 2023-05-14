@@ -30,17 +30,20 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Profile </a>
+                <a class="nav-link" href="/Profile.aspx">Profile </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
+                <a class="nav-link" href="/Cart.aspx">Cart</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Orders</a>
+                <a class="nav-link" href="/Orders.aspx">Orders</a>
               </li>
             </ul>
           </div>
         </nav>
+        <a style="margin-left: 10px; color: #232F3E;" href="ShowCategori.aspx"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+</svg> Torna indietro</a>
         <section style="width: 80%; background-color: #FFF; margin: auto; padding: 20px; max-width: 1150px;">
              <div class="row">
                 <div class="col-md-4">
@@ -74,12 +77,12 @@
                         <div>
                             <div style="float:left;">Quantità:</div>
                             <div style="float:left; margin-left: 7px;">
-                                <select id="quantiSelect">
+                                <select runat="server" ID="quantiSelect">
                                 
                                 </select>
                             </div>
                             <br><br>
-                            <button type='button' class='btn btn-warning' style='width: 100%' onclick='addToCart()'><small>Aggiungi al carrello</small></button>                        
+                            <asp:Button runat="server" type='button' class='btn btn-warning' ID="addToCartBtn" style='width: 100%' OnClick='addToCart' Text="Add to cart" />                        
                             <br>
                             <br>
                             <small>
