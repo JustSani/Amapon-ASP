@@ -53,7 +53,7 @@ namespace Amapon
 
                         HtmlGenericControl img = new HtmlGenericControl("img");
                         img.ID = "Img" + i;
-                        img.Attributes.Add("src", "https://sanino.altervista.org/Amapon/productsImages/" + product["prodID"] + ".jpeg");
+                        img.Attributes.Add("src", "/img/" + product["prodID"] + ".jpeg");
                         img.Attributes.Add("style", "width: 100%;");
 
                         HtmlGenericControl br = new HtmlGenericControl("br");

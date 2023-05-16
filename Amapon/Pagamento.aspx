@@ -67,7 +67,9 @@
             text-decoration: none;
         }
 
-
+        btn{
+            background-color: #00000000;
+        }
 
         .btn.btn-primary:hover .fas.fa-arrow-right {
             transform: translate(15px);
@@ -132,10 +134,9 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="btn btn-primary mb-3" onclick="pay()">
-                    <button runat="server" onserverclick="conferma" ID="btn" class="ps-3" style="margin: auto;"></button>
+                    <button runat="server" onserverclick="conferma" ID="btn" class="btn btn-primary" style="margin: auto; text-align: center;"></button>
                     <span class="fas fa-arrow-right"></span>
-                </div>
+                    <br />
             </div>
         </div>
     </div>

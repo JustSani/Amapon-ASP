@@ -27,7 +27,7 @@ namespace Amapon
 
 
             //verifichiamo la presenza di soldi
-            strSQL = @"SELECT * from users WHERE userID=" + Session["codice"] + " AND wallet > " + Session["totale"];
+            strSQL = @"SELECT * from users WHERE userID=" + Session["codice"] + " AND wallet >= " + Session["totale"];
             DataTable serverData = new DataTable();
             serverData = adoWeb.eseguiQuery(strSQL, CommandType.Text);
 
@@ -44,7 +44,7 @@ namespace Amapon
                 orderID++;
 
                 //prendiamo gli elementi dall carrello
-                strSQL = @"SELECT * FROM cart INNER JOIN product ON cart.prodID = product.prodID WHERE cart.userID=1";
+                strSQL = @"SELECT * FROM cart INNER JOIN products as product ON cart.prodID = product.prodID WHERE cart.userID=" + Session["codice"];
                 serverData = new DataTable();
                 serverData = adoWeb.eseguiQuery(strSQL, CommandType.Text);
 

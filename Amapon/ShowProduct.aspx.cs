@@ -37,7 +37,7 @@ namespace Amapon
                 prodDesc.InnerText = serverData.Rows[0]["prodDescription"].ToString();
                 prize2.InnerText = serverData.Rows[0]["prize"].ToString() + "€";
                 tempo.InnerText = serverData.Rows[0]["daysToWait"].ToString() + " giorni";
-                img.Attributes.Add("src", "https://sanino.altervista.org/Amapon/productsImages/" + serverData.Rows[0]["prodId"] + ".jpeg");
+                img.Attributes.Add("src", "/img/" + serverData.Rows[0]["prodId"] + ".jpeg");
                 venditore.InnerText = "Amazon \n" + serverData.Rows[0]["producer"].ToString();
 
                 int nAvailable = Convert.ToInt32(serverData.Rows[0]["nAvailable"]);

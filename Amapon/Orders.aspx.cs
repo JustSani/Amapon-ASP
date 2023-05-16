@@ -65,7 +65,7 @@ namespace Amapon
 
                 int totaleOrdine = 0;
 
-                strSQL = "SELECT * FROM orders INNER JOIN product ON orders.prodID = product.prodID WHERE orderID=" + serverDataRow["orderID"] + " ";
+                strSQL = "SELECT * FROM orders INNER JOIN products as product ON orders.prodID = product.prodID WHERE orderID=" + serverDataRow["orderID"] + " ";
 
                 DataTable order = new DataTable();
                 order = adoWeb.eseguiQuery(strSQL, CommandType.Text);
@@ -91,7 +91,7 @@ namespace Amapon
                     imgLinkButton.Click += new EventHandler(showProd);
 
                         HtmlGenericControl img = new HtmlGenericControl("img");
-                        img.Attributes.Add("src", "https://sanino.altervista.org/Amapon/productsImages/" + DatacurrentOrder["prodID"] + ".jpeg");
+                        img.Attributes.Add("src", "/img/" + DatacurrentOrder["prodID"] + ".jpeg");
                         img.Attributes.Add("class", "img-fluid");
                     imgLinkButton.Controls.Add(img);
 

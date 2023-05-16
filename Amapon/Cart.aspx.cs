@@ -25,8 +25,8 @@ namespace Amapon
             string strSQL = string.Empty;
             adoNet adoWeb = new adoNet();
 
-            strSQL = @"SELECT cart.prodID as prodID, prodName, nAdded, prize FROM cart INNER JOIN product ON cart.prodID = product.prodID
-                              WHERE cart.userID=1";
+            strSQL = @"SELECT cart.prodID as prodID, prodName, nAdded, prize FROM cart INNER JOIN products as product ON cart.prodID = product.prodID
+                              WHERE cart.userID=" + Session["codice"];
 
             DataTable serverData = new DataTable();
             serverData = adoWeb.eseguiQuery(strSQL, CommandType.Text);
@@ -55,7 +55,7 @@ namespace Amapon
                     // image
                     HtmlGenericControl img = new HtmlGenericControl("img");
                     img.Attributes.Add("class", "img-fluid");
-                    img.Attributes.Add("src", "https://sanino.altervista.org/Amapon/productsImages/" + serverDataRow["prodID"] + ".jpeg");
+                    img.Attributes.Add("src", "img/" + serverDataRow["prodID"] + ".jpeg");
                     
                     linkProd.Controls.Add(img);
 
